@@ -45,12 +45,22 @@ app.get('/about',(req, res) => {
     pageTitle: 'About Page'
   });
 });
+
+app.get('/project',(req,res) =>{
+  res.render('project.hbs',{
+    pageTitle: 'git hub Page'
+  });
+});
+
+
 // /bad send back json data with errorMessage
 app.get('/bad',(req,res) =>{
   res.send({
     errorMessage: 'error occur! contact the officer'
   })
 });
+
+
 
 
 app.listen(port , () => {
